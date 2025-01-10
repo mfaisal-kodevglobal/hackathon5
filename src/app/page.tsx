@@ -5,7 +5,7 @@ import ShopexOffer from "./components/ShopexOffer";
 import OffProducts from "./components/OffProducts";
 import LatestBlog from "./components/LatestBlog";
 import TopCategories from "./components/TopCategories";
-import { GetProductData } from "@/sanity/sanaity.query";
+
 
 export default async  function Home() {
 
