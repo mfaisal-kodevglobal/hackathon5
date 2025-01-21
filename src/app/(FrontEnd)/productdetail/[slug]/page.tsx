@@ -1,6 +1,8 @@
 
 import { GetProductDetails } from "@/sanity/sanaity.query";
+
 export default async function  ProductDetail({params}:any) {
+
   const productData = await GetProductDetails(params.slug);
   console.log('productDataDetails', productData);
     return (
@@ -43,7 +45,7 @@ export default async function  ProductDetail({params}:any) {
                   className="w-full object-cover rounded-md"
                 />
 
-                </div>
+                </div> 
   
                 {/* Product Details - Description beside the image */}
                 <div className="flex-1 pl-6 flex flex-col justify-between h-full">

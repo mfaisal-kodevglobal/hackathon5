@@ -3,4 +3,8 @@ import { userSchema } from "./user";
 import { productSchema } from "./products"
 
 
-export const schemaTypes = [mobileSchema, userSchema, productSchema];
+export const schemaTypes = [
+                            mobileSchema, 
+                            userSchema, 
+                            productSchema
+                        ];

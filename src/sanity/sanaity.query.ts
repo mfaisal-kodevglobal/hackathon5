@@ -78,7 +78,7 @@ export async function GetShopListData() {
     )    
 }
 
-//Shop List
+//Product Details data
 export async function GetProductDetails(param:any) {
     console.log('GetProductDetails(param:any)=>',param);
     return sanityClient.fetch(

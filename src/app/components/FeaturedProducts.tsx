@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { GetFeaturedProductsData } from "@/sanity/sanaity.query";
+import { GetFeaturedProductsData } from '@/sanity/sanaity.query';
 
 export default async function  FeaturedProducts() {
   var productColors = ['#05E6B7', '#FB2E86', '#00009D'];
