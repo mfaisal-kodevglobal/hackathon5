@@ -76,3 +76,15 @@ Key Directories:
 
 Conclusion
 This project integrates Next.js with Sanity CMS to create a dynamic and high-performing web application. The folder structure is designed for scalability, and the performance of the website has been optimized based on GTMetrix analysis. The application is now fully functional with content being dynamically pulled from Sanity CMS.
+
+Checklist for Day 6:
+Deployment Preparation:
+done
+Staging Environment Testing:
+done
+Documentation:
+done
+Form Submission:
+done
+Final Review:
+done
