@@ -14,22 +14,22 @@ export default async function  ProductDetail({params}:any) {
               {/* Left Sidebar - Small Images with responsive widths */}
               <div className="w-[80px] sm:w-[100px] lg:w-[80px] flex gap-2 flex-wrap sm:flex-col h-[500px]">
                 <img
-                   src={process.env.BASE_URL+`/${productData[0].image}`}
+                   src={process.env.BASE_URL+`${productData[0].image}`}
                   alt="Product1"
                   className="w-[70px] h-[70px] cursor-pointer rounded-md outline outline-2 outline-gray-200 hover:outline-blue-500 mb-2"
                 />
                 <img
-                   src={process.env.BASE_URL+`/${productData[0].image}`}
+                   src={process.env.BASE_URL+`${productData[0].image}`}
                   alt="Product2"
                   className="w-[70px] h-[70px] cursor-pointer rounded-md outline outline-2 outline-gray-200 hover:outline-blue-500 mb-2"
                 />
                 <img
-                   src={process.env.BASE_URL+`/${productData[0].image}`}
+                   src={process.env.BASE_URL+`${productData[0].image}`}
                   alt="Product3"
                   className="w-[70px] h-[70px] cursor-pointer rounded-md outline outline-2 outline-gray-200 hover:outline-blue-500 mb-2"
                 />
                 <img
-                   src={process.env.BASE_URL+`/${productData[0].image}`}
+                   src={process.env.BASE_URL+`${productData[0].image}`}
                   alt="Product4"
                   className="w-[70px] h-[70px] cursor-pointer rounded-md outline outline-2 outline-gray-200 hover:outline-blue-500"
                 />
@@ -40,7 +40,7 @@ export default async function  ProductDetail({params}:any) {
                 {/* Product Image - Set to responsive width and height  https://readymadeui.com/images/product2.webp*/}
                 <div className="w-full lg:w-[375px] h-full p-4 flex-shrink-0">
                 <img
-                  src={process.env.BASE_URL+`/${productData[0].image}`}  // Make sure image URL is dynamically inserted
+                  src={process.env.BASE_URL+`${productData[0].image}`}  // Make sure image URL is dynamically inserted
                   alt="Product"
                   className="w-full object-cover rounded-md"
                 />
@@ -195,28 +195,28 @@ export default async function  ProductDetail({params}:any) {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
               {/* Product 1 */}
               <div className="bg-white p-4 rounded-md shadow-md">
-                <img src={process.env.BASE_URL+`/img/products/rp1.png`} alt="Product 1" className="w-full h-40 object-cover rounded" />
+                <img src={process.env.BASE_URL+`img/products/rp1.png`} alt="Product 1" className="w-full h-40 object-cover rounded" />
                 <h4 className="text-lg font-semibold mt-2">Product Name 1 </h4>
                 <p className="text-sm text-gray-500">Short description</p>
                 <p className="mt-2 font-bold text-[#151875]">$18,000</p>
               </div>
               {/* Product 2 */}
               <div className="bg-white p-4 rounded-md shadow-md">
-                <img src={process.env.BASE_URL+`/img/products/rp2.png`} alt="Product 2" className="w-full h-40 object-cover rounded" />
+                <img src={process.env.BASE_URL+`img/products/rp2.png`} alt="Product 2" className="w-full h-40 object-cover rounded" />
                 <h4 className="text-lg font-semibold mt-2">Product Name 2</h4>
                 <p className="text-sm text-gray-500">Short description</p>
                 <p className="mt-2 font-bold text-[#151875]">$24,000</p>
               </div>
               {/* Product 3 */}
               <div className="bg-white p-4 rounded-md shadow-md">
-                <img src={process.env.BASE_URL+`/img/products/rp3.png`} alt="Product 3" className="w-full h-40 object-cover rounded" />
+                <img src={process.env.BASE_URL+`img/products/rp3.png`} alt="Product 3" className="w-full h-40 object-cover rounded" />
                 <h4 className="text-lg font-semibold mt-2">Product Name 3</h4>
                 <p className="text-sm text-gray-500">Short description</p>
                 <p className="mt-2 font-bold text-[#151875]">$22,000</p>
               </div>
               {/* Product 4 */}
               <div className="bg-white p-4 rounded-md shadow-md">
-                <img src={process.env.BASE_URL+`/img/products/rp4.png`} alt="Product 4" className="w-full h-40 object-cover rounded" />
+                <img src={process.env.BASE_URL+`img/products/rp4.png`} alt="Product 4" className="w-full h-40 object-cover rounded" />
                 <h4 className="text-lg font-semibold mt-2">Product Name 4</h4>
                 <p className="text-sm text-gray-500">Short description</p>
                 <p className="mt-2 font-bold text-[#151875]">$20,000</p>
