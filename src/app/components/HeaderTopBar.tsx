@@ -67,12 +67,14 @@ const HeaderTopBar: React.FC = () => {
                 </svg>
               </li>
               {/* Cart */}
-              <li className="flex items-center space-x-2">
-                <a href="cart">
+              <li className="flex items-center">
+                
+                <a href="javascript:void(0)" className="snipcart-checkout">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 4h14l-1.5 9h-13L7 4zm0 0L5.5 2H2v2h2.5L7 4zm10 14c0 1.104-.896 2-2 2s-2-.896-2-2 2-.896 2-2 2 .896 2 2zm-8 0c0 1.104-.896 2-2 2s-2-.896-2-2 2-.896 2-2 2 .896 2 2z" />
                   </svg>
                 </a>
+                <span className="snipcart-items-count snipcart-checkout border-10 bg-[#FB2E86] rounded-lg p-1"></span>
               </li>
             </ul>
           </div>
