@@ -47,12 +47,13 @@ export default async function  FeaturedProducts() {
                   </span>
                 
               </h4>
-              <button className="snipcart-add-item bg-slate-50 p-3 rounded-md"
+              <button className="snipcart-add-item bg-slate-50 p-3  w-full sm:w-auto px-6 py-3 text-[#151875] text-sm font-semibold rounded-md border border-[#151875]"
                       data-item-id={product.slug}
                       data-item-name={product.title}
                       data-item-price={product.price}
                       data-item-image={product.image}
-                      data-item-url="https://google.com">Add to card</button>
+                      data-item-url={product.slug}>Add to card</button>
+
             </div>
           </div>
         ))

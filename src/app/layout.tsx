@@ -32,9 +32,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cdn.snipcart.com" />
         {/* <link id="snipcart-theme" type="text/css" href="https://app.snipcart.com/themes/base/snipcart.css" rel="stylesheet" /> */}
         {/* <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"/> */}
-        <link rel="stylesheet" href="css/snipcart.css"/>
+        <link rel="stylesheet" href={process.env.BASE_URL+`/css/snipcart.css`}/>
         <link rel="shortcut icon" href="../public/favicon.ico" />
-        <script src="js/snipcart.js"></script>
+        <script src={process.env.BASE_URL+`/js/snipcart.js`}></script>
         </head>
       <body className={josefin_init.variable}>
       <CartProvider>
@@ -46,7 +46,7 @@ export default function RootLayout({
         <div 
           hidden 
           id="snipcart" 
-          data-api-key="NmE0YWU2NWQtY2UzOC00ZmNhLThmYTItNDlhOTlkNDI0Y2NiNjM4NzE5OTM2NDY2NTI2NTk0"
+          data-api-key={process.env.NEXT_PUBLIC_SNIPCART}
           data-config-modal-style="side"
           data-config-add-product-behavior=""
           ></div>

@@ -144,6 +144,12 @@ export default async function ShopList() {
                           <path d="M11 4a7 7 0 015.09 11.86l4 4a1 1 0 11-1.41 1.41l-4-4A7 7 0 1111 4zm0 2a5 5 0 100 10 5 5 0 000-10z" />
                         </svg>
                       </button>
+                      <button className="snipcart-add-item bg-slate-50 p-3  w-full sm:w-auto px-6 py-3 text-[#151875] text-sm font-semibold rounded-md border border-[#151875]"
+                      data-item-id={product.slug}
+                      data-item-name={product.title}
+                      data-item-price={product.price}
+                      data-item-image={product.image}
+                      data-item-url={product.slug}>Add to card</button>
                     </div>
                   </div>
                 </div>

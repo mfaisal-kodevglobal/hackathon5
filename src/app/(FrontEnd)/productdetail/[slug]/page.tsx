@@ -105,12 +105,18 @@ export default async function  ProductDetail({params}:any) {
   
                     {/* Add to Cart Button and Heart Icon */}
                     <div className="flex items-center space-x-2 mt-8">
-                      <button
+                      {/* <button
                         type="button"
                         className="w-full sm:w-auto px-6 py-3 text-[#151875] text-sm font-semibold rounded-md border border-[#151875]"
                       >
                         Add to Cart
-                      </button>
+                      </button> */}
+                                    <button className="snipcart-add-item bg-slate-50 p-3  w-full sm:w-auto px-6 py-3 text-[#151875] text-sm font-semibold rounded-md border border-[#151875]"
+                      data-item-id={productData[0].slug}
+                      data-item-name={productData[0].title}
+                      data-item-price={productData[0].price}
+                      data-item-image={process.env.BASE_URL+`/${productData[0].image}`}
+                      data-item-url={productData[0].slug}>Add to card</button>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="w-5 h-5"
@@ -189,28 +195,28 @@ export default async function  ProductDetail({params}:any) {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
               {/* Product 1 */}
               <div className="bg-white p-4 rounded-md shadow-md">
-                <img src="img/products/rp1.png" alt="Product 1" className="w-full h-40 object-cover rounded" />
+                <img src={process.env.BASE_URL+`/img/products/rp1.png`} alt="Product 1" className="w-full h-40 object-cover rounded" />
                 <h4 className="text-lg font-semibold mt-2">Product Name 1 </h4>
                 <p className="text-sm text-gray-500">Short description</p>
                 <p className="mt-2 font-bold text-[#151875]">$18,000</p>
               </div>
               {/* Product 2 */}
               <div className="bg-white p-4 rounded-md shadow-md">
-                <img src="img/products/rp2.png" alt="Product 2" className="w-full h-40 object-cover rounded" />
+                <img src={process.env.BASE_URL+`/img/products/rp2.png`} alt="Product 2" className="w-full h-40 object-cover rounded" />
                 <h4 className="text-lg font-semibold mt-2">Product Name 2</h4>
                 <p className="text-sm text-gray-500">Short description</p>
                 <p className="mt-2 font-bold text-[#151875]">$24,000</p>
               </div>
               {/* Product 3 */}
               <div className="bg-white p-4 rounded-md shadow-md">
-                <img src="img/products/rp3.png" alt="Product 3" className="w-full h-40 object-cover rounded" />
+                <img src={process.env.BASE_URL+`/img/products/rp3.png`} alt="Product 3" className="w-full h-40 object-cover rounded" />
                 <h4 className="text-lg font-semibold mt-2">Product Name 3</h4>
                 <p className="text-sm text-gray-500">Short description</p>
                 <p className="mt-2 font-bold text-[#151875]">$22,000</p>
               </div>
               {/* Product 4 */}
               <div className="bg-white p-4 rounded-md shadow-md">
-                <img src="img/products/rp4.png" alt="Product 4" className="w-full h-40 object-cover rounded" />
+                <img src={process.env.BASE_URL+`/img/products/rp4.png`} alt="Product 4" className="w-full h-40 object-cover rounded" />
                 <h4 className="text-lg font-semibold mt-2">Product Name 4</h4>
                 <p className="text-sm text-gray-500">Short description</p>
                 <p className="mt-2 font-bold text-[#151875]">$20,000</p>
