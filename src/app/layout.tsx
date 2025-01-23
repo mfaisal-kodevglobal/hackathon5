@@ -33,12 +33,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cdn.snipcart.com" />
         <link
           rel="stylesheet"
-          href={process.env.BASE_URL + `/css/snipcart.css`}
+          href={process.env.BASE_URL + `css/snipcart.css`}
         />
         <link rel="shortcut icon" href="../public/favicon.ico" />
         {/* Loading snipcart script asynchronously */}
         <Script
-          src={process.env.BASE_URL + `/js/snipcart.js`}
+          src={process.env.BASE_URL + `js/snipcart.js`}
           strategy="afterInteractive"
         />
       </head>
