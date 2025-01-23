@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import  HeaderTopBar  from './components/HeaderTopBar'
-import  Footer  from './components/Footer'
+import HeaderTopBar from './components/HeaderTopBar'
+import Footer from './components/Footer'
 import { Josefin_Sans } from 'next/font/google'
 import HeaderMenu from './components/HeaderMenu'
-import { CartProvider } from '@/app/context/CartContext';
+import { CartProvider } from '@/app/context/CartContext'
+import Script from 'next/script'
 
 const josefin_init = Josefin_Sans({
-  subsets:["latin"],
-  weight:["100", "300", "700"],
-  variable:"--font--josefin--"
-});
+  subsets: ["latin"],
+  weight: ["100", "300", "700"],
+  variable: "--font--josefin--"
+})
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,31 +28,35 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-       <head>
+      <head>
         <link rel="preconnect" href="https://app.snipcart.com" />
         <link rel="preconnect" href="https://cdn.snipcart.com" />
-        {/* <link id="snipcart-theme" type="text/css" href="https://app.snipcart.com/themes/base/snipcart.css" rel="stylesheet" /> */}
-        {/* <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"/> */}
-        <link rel="stylesheet" href={process.env.BASE_URL+`/css/snipcart.css`}/>
+        <link
+          rel="stylesheet"
+          href={process.env.BASE_URL + `/css/snipcart.css`}
+        />
         <link rel="shortcut icon" href="../public/favicon.ico" />
-        <script src={process.env.BASE_URL+`/js/snipcart.js`}></script>
-        </head>
+        {/* Loading snipcart script asynchronously */}
+        <Script
+          src={process.env.BASE_URL + `/js/snipcart.js`}
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={josefin_init.variable}>
-      <CartProvider>
-        <HeaderTopBar />
-        <HeaderMenu/>
-        {children}
-        <Footer/>
-        {/* <div hidden id="snipcart" data-api-key="NmE0YWU2NWQtY2UzOC00ZmNhLThmYTItNDlhOTlkNDI0Y2NiNjM4NzE5OTM2NDY2NTI2NTk0"></div> */}
-        <div 
-          hidden 
-          id="snipcart" 
-          data-api-key={process.env.NEXT_PUBLIC_SNIPCART}
-          data-config-modal-style="side"
-          data-config-add-product-behavior=""
+        <CartProvider>
+          <HeaderTopBar />
+          <HeaderMenu />
+          {children}
+          <Footer />
+          <div
+            hidden
+            id="snipcart"
+            data-api-key={process.env.NEXT_PUBLIC_SNIPCART}
+            data-config-modal-style="side"
+            data-config-add-product-behavior=""
           ></div>
-      </CartProvider>
-        </body>
+        </CartProvider>
+      </body>
     </html>
   )
 }
